@@ -53,6 +53,7 @@ ON members.sws_id = sws.sws_id;
 ```
 
 ### 결과 
+<img width="397" alt="20220411_145901" src="https://user-images.githubusercontent.com/76603301/162674372-e047fdbb-b0fb-42e2-98b5-28cc75c48109.png">
 
 
 
