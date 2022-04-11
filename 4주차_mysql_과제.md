@@ -21,6 +21,7 @@ INSERT INTO sws(sws_id, team_name) VALUES
     (4, "이상청");
 ```
 
+
 ### b. member 테이블 만들기 
 ```sql
 CREATE TABLE members(
@@ -41,7 +42,8 @@ INSERT INTO members(member_id, member_name, position,  email, sws_id) VALUES
 
 ```
 
-### C. MEMBERS 테이블과 SWS 테이블 join하기 
+
+### C. members 테이블과 sws 테이블 join하기 
 ```sql
 SELECT  members.member_id, members.member_name, sws.team_name, members.position,  members.email, members.sws_id
 FROM members
@@ -49,6 +51,9 @@ JOIN sws
 ON members.sws_id = sws.sws_id;
 
 ```
+
+### 결과 
+
 
 
 
