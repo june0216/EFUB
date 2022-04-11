@@ -1,3 +1,3 @@
 ### 4주차 과제 
 # (1) 학사 정보 관리 ERD
-https://github.com/june0216/EFUB/issues/1#issue-1199376078
+https://user-images.githubusercontent.com/76603301/162665394-caa0cf53-b687-47e4-88c3-5ace650fe8bf.png
