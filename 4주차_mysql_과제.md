@@ -4,8 +4,8 @@
 
 # (2) mysql 실습
 
-a. sws 테이블 생성하기 
-'''sql
+### a. sws 테이블 생성하기 
+```sql
 USE efub;
 
 CREATE TABLE sws (
@@ -19,4 +19,36 @@ INSERT INTO sws(sws_id, team_name) VALUES
     (2, "라꾸라꾸"),
     (3, "STEADY"),
     (4, "이상청");
-'''
+```
+
+### b. member 테이블 만들기 
+```sql
+CREATE TABLE members(
+	member_id BIGINT NOT NULL,
+    member_name VARCHAR(25) NOT NULL, 
+    position VARCHAR(25) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    sws_id BIGINT NOT NULL,
+    FOREIGN KEY(sws_id) 
+    REFERENCES sws(sws_id) ON UPDATE CASCADE
+);   
+
+INSERT INTO members(member_id, member_name, position,  email, sws_id) VALUES
+	(1, "권지윤", "FRONT/BACK", "ziyun1612@ewhain.net", 2), 
+    (2, "권지윤", "FRONT/BACK", "ziyun1612@ewhain.net", 2), 
+    (3, "권지윤", "FRONT/BACK", "ziyun1612@ewhain.net" , 2), 
+    (4, "권지윤", "FRONT/BACK", "ziyun1612@ewhain.net", 2);
+
+```
+
+### C. MEMBERS 테이블과 SWS 테이블 join하기 
+```sql
+SELECT  members.member_id, members.member_name, sws.team_name, members.position,  members.email, members.sws_id
+FROM members
+JOIN sws
+ON members.sws_id = sws.sws_id;
+
+```
+
+
+
